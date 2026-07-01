@@ -3,7 +3,7 @@ import heroImg from './assets/hero.png'
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import ProductDetail from './pages/ProductDetail'
 import Home from './pages/Home'
-import Login from './pages/auth/login'
+import Login from './pages/auth/Login'
 import Register from './pages/auth/Register'
 import { useSelector } from 'react-redux'
 import Checkout from './pages/Checkout'
