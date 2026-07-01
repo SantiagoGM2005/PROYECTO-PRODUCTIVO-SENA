@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Layout from "../../Layouts/Layouts";
+import Layout from "../../layouts/Layouts";
 import { useDispatch, useSelector } from "react-redux";
 import { userRegisterAction } from "../../Redux/Actions/User";
 

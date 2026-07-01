@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import Layout from "../../Layouts/Layouts";
+import Layout from "../../layouts/Layouts";
 import { userLoginAction } from "../../Redux/Actions/User";
 import { useState } from "react";
 
