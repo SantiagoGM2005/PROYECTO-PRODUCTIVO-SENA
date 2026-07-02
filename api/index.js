@@ -20,7 +20,7 @@ const orderRoute = require("./routes/Order");
 app.use(express.json())
 
 app.use(cors({
-    origin: "*", // La URL exacta de tu frontend
+    origin: "https://proyecto-productivo-sena-msv3.vercel.app", // La URL exacta de tu frontend
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
