@@ -19,7 +19,10 @@ const orderRoute = require("./routes/Order");
 
 app.use(express.json())
 
-app.use(cors())
+app.use(cors({
+    origin: "https://pruebabackend-murex.vercel.app", 
+    credentials: true
+}))
 
 
 // database seeder routes
