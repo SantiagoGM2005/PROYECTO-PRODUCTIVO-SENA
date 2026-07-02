@@ -25,7 +25,7 @@ export const userLoginAction = (email, password) => async (dispatch)=>{
                 "Content-Type": "application/json",
             }
         }
-        const { data } = await axios.post(`${BASE_URL}/api/users/login`, { email, password }, config);
+        const { data } = await axios.post("https://proyecto-productivo-sena.vercel.app/api/users/login", { email, password }, config);
 
         dispatch({ type: USER_LOGIN_REQ_SUCCESS, payload: data });
         localStorage.setItem("userInfo", JSON.stringify(data))
@@ -59,7 +59,7 @@ export const userRegisterAction = (name, email, password) => async (dispatch) =>
         }
 
 
-        const { data } = await axios.post(`${BASE_URL}/api/users`, { name, email, password }, config);
+        const { data } = await axios.post("https://proyecto-productivo-sena.vercel.app/api/users", { name, email, password }, config);
 
         dispatch({ type: USER_REGISTER_REQ_SUCCESS, payload: data });
         dispatch({ type: USER_LOGIN_REQ_SUCCESS, payload: data });
