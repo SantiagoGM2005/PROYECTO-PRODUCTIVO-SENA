@@ -37,8 +37,12 @@ app.use("/api/products", productRoute);
 //routes for orders
 app.use("/api/orders", orderRoute);
 
+app.get("/api/test", (req, res) => {
+    res.json({ message: "El backend está vivo y conectado a la DB" });
+});
 
-app.listen(PORT || 3000,()=>{
+
+app.listen(PORT || 9000,()=>{
 console.log(`server listening on port ${PORT}`);
 });
 
