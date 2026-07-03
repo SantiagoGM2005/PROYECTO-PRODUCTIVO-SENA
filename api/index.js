@@ -38,7 +38,7 @@ app.use("/api/products", productRoute);
 app.use("/api/orders", orderRoute);
 
 
-app.listen(PORT || 9000,()=>{
+app.listen(PORT || 3000,()=>{
 console.log(`server listening on port ${PORT}`);
 });
 
