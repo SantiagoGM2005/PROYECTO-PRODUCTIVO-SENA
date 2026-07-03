@@ -19,12 +19,10 @@ import { BASE_URL } from "../Constants/BASE_URL";
 
 export const userLoginAction = (email, password) => async (dispatch)=>{
     try {
-        dispatch({ type: USER_LOGIN_REQ })
-        const config = {
-            headers: {
-                "Content-Type": "application/json",
-            }
-        }
+        dispatch({ type: USER_LOGIN_REQ });
+
+        console.log("Intentando conectar a:", "https://proyecto-productivo-sena.vercel.app/api/users/login");
+        
         const { data } = await axios.post("https://proyecto-productivo-sena.vercel.app/api/users/login", { email, password }, config);
 
         dispatch({ type: USER_LOGIN_REQ_SUCCESS, payload: data });
@@ -52,11 +50,7 @@ export const userLogoutAction = () => async (dispatch) => {
 export const userRegisterAction = (name, email, password) => async (dispatch) => {
     try {
         dispatch({ type: USER_REGISTER_REQ });
-        const config = {
-            headers: {
-                "Content-Type": "application/json",
-            }
-        }
+        
 
         const { data } = await axios.post("https://proyecto-productivo-sena.vercel.app/api/users", { name, email, password }, config);
 
