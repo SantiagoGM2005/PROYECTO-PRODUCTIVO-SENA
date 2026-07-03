@@ -50,6 +50,8 @@ export const userLogoutAction = () => async (dispatch) => {
 export const userRegisterAction = (name, email, password) => async (dispatch) => {
     try {
         dispatch({ type: USER_REGISTER_REQ });
+
+         console.log("Intentando conectar a:", "https://proyecto-productivo-sena.vercel.app/api/users");
         
 
         const { data } = await axios.post("https://proyecto-productivo-sena.vercel.app/api/users", { name, email, password }, config);
