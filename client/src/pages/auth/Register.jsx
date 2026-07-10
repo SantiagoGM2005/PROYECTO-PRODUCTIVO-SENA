@@ -15,6 +15,7 @@ export default function Register() {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    console.log("¡Click detectado en el formulario!");
     dispatch(userRegisterAction(name, email, password));
   };
 
